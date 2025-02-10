@@ -4,6 +4,7 @@
     --page-accent-font: "PressStart2P", monospace;
     --main-font-weight: 400;
     --heading-font-weight: 700;
+    --button-font-size: 14px;
     --page-background-image: repeating-linear-gradient(
         to left,
         #d3d3d3 0 2px,
@@ -15,5 +16,8 @@
     --page-main-color: #000;
     --min-block-width: 375px;
     --max-block-width: 696px;
+
+    --breakpoint: 375px;
+    --breakpoint-simulation: (100vw - var(--breakpoint));
 
 }

@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header section__rubbering">
-      <div class="header__title-block section__decorating">
+    <header class="header section__rubbering section__flexing">
+      <div class="header__title-block section__decorating section__flexing">
         <a class="header__logo">&lt;/html&gt;</a>
         <h1 class="header__title">закрывающий тег</h1>
       </div>
@@ -23,7 +23,7 @@
           <h2 class="card__list-heading section__decorating ">
             Фритрек и нулевой спринт: Подготовка к работе
           </h2>
-          <figure class="card__figure section__decorating ">
+          <figure class="card__figure  section__decorating">
             <img
             src="./images/car.png"
             alt="Стилизованное изображение автомобиля"
@@ -34,7 +34,10 @@
           <div class="card__content section__decorating">
             <p class="card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
             <p class="card__text">Место для ваших воспоминаний о начале обучения.</p>
-            <button class="card__button"></button>
+            <span class="button__text">
+              <button class="card__icon-button"></button>
+              <button class="card__like-button">Like</button>
+            </span>
           </div>
         </li>
       </ul>
