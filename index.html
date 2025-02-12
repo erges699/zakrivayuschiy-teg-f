@@ -34,14 +34,24 @@
           <div class="card__content section__decorating">
             <p class="card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
             <p class="card__text">Место для ваших воспоминаний о начале обучения.</p>
-            <span class="button__text">
+            <div class="card__button"> 
               <button class="card__icon-button"></button>
-              <button class="card__like-button">Like</button>
-            </span>
+              <button class="card__like-button">
+                <span class="button__text">Like</span>
+              </button> 
+            </div>            
           </div>
         </li>
       </ul>
     </main>
+    <footer class="footer section__rubbering">
+        <button class="card__save-button">
+          <svg class="button__icon" viewBox="0 0 39 38">
+            <use href="svg/floppy.svg#floppy" />
+          </svg>
+          <span class="button__text">Сохранить на память</span>
+        </button>
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
