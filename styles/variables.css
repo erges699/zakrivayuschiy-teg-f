@@ -20,4 +20,8 @@
     --breakpoint: 375px;
     --breakpoint-simulation: (100vw - var(--breakpoint));
 
+    --like-outline-color: #000;
+    --like-background-color: #FF0000;
+    --like-button-text-color: #fff;
+
 }
