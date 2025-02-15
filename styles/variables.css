@@ -8,11 +8,8 @@
 
     --button-font-size: 14px;
     --button-text-line-height: 0.9;
-    --page-background-image: repeating-linear-gradient(
-        to left,
-        #d3d3d3 0 2px,
-        transparent 2px 4px
-      ),
+    --page-background-image: 
+      repeating-linear-gradient(to right,#d3d3d3 0 2px, transparent 2px 4px),
       repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
       linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
     --page-background-color: #fff;
@@ -23,7 +20,8 @@
     --breakpoint: 375px;
     --breakpoint-simulation: (100vw - var(--breakpoint));
 
-    --like-outline-color: #000;
+    --like-button-outline-color: #000;
     --like-background-color: #FF0000;
     --like-button-text-color: #fff;
+    --diff-content-color: var(--page-background-color);
 }

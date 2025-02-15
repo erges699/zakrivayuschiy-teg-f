@@ -141,7 +141,7 @@
   object-position: right;
 }
 
-.button {
+.button-decoring {
   font-family: var(--page-accent-font);
   font-size: var(--button-font-size);
   line-height: var(--button-text-line-height);
@@ -156,17 +156,6 @@
   gap: 12px;
 }
 
-/*
-.card__button {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  gap: 12px;
-  font-family: var(--page-accent-font);
-  font-size: var(--button-font-size);
-  line-height: 0.9;
-}
-*/
 .button__text {
   color: var(--page-main-color);
 }
@@ -181,7 +170,6 @@
 }
 
 .card__icon-button::focus-visible {
-  /*border: 2px solid var(--page-main-color);*/
   transition: outline-color 0.3s ease;
 }
 
@@ -197,7 +185,30 @@
 }
 
 .card__like-button:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--like-outline-color);
+  box-shadow: 2px 2px 0px 0px var(--like-button-outline-color);
+}
+
+.button-diff {
+  position: relative;
+  overflow: clip;
+}
+
+.button-diff__content {
+  color: var(--diff-content-color);
+  mix-blend-mode: difference;
+}
+
+.button-diff::before {
+  position: absolute;
+  content: '';
+  inset: 0;
+  background-color: var(--page-main-color);
+  transform: translateX(-100%);
+  transition: transform .5s ease-in-out;
+}
+
+.button-diff:hover::before {
+  transform: translateX(0);
 }
 
 .footer {
@@ -219,6 +230,14 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+.card__save-button:focus {
+  outline: none;
+}
+
+.card__save-button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--like-button-outline-color);
 }
 
 .button__icon {
