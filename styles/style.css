@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /*align-items: center;*/
 }
 
 .header {
@@ -48,6 +48,7 @@
 }
 
 .header__title-block{
+  align-items: center;
   min-width: 100%;
   gap: 20px;
   padding-block: clamp(120px, var(--breakpoint-simulation) * 1000, 128px);
@@ -67,6 +68,7 @@
 .main {
   /*margin-block-start: 100px;*/
   margin: 100px auto 52px;
+  line-height: var(--main-text-line-height);
 }
 
 .card__list {
@@ -75,18 +77,60 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  list-style-type: none;
 }
 
-.card__list-item {}
+.card__list-item {
+  background: var(--page-background-color);
+}
 
-.card__list-heading {}
+.card__content {
+  gap: 25px;
+  padding: 25px;
+}
+
+.card__text {
+  gap: 27px;
+
+}
+
+.card__list-heading {
+  font-weight: var(--heading-font-weight);
+  padding-block: 3px;
+  padding-inline: 10px;
+}
 
 .card__figure{
+  position: relative;
   margin: 0;
   width: 100%;
   height: 100%;
   overflow: clip;
+}
+
+.card__image-label {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  font-family: var(--page-accent-font);
+  line-height: normal; 
+  text-transform: uppercase;
+  text-shadow:
+  -1px 0 var(--page-background-color), 
+  0 1px var(--page-background-color),  
+  1px 0 var(--page-background-color), 
+  0 -1px var(--page-background-color);
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
+}
+
+@supports (
+  (-webkit-text-stroke: 1px var(--page-background-color)) or
+    (text-stroke: 1px var(--page-background-color))
+) {
+  .card__imges__label {
+    -webkit-text-stroke: 1px var(--page-background-color);
+  }
 }
 
 .card__image {
@@ -97,33 +141,39 @@
   object-position: right;
 }
 
+.button {
+  font-family: var(--page-accent-font);
+  font-size: var(--button-font-size);
+  line-height: var(--button-text-line-height);
+  background: var(--like-button-text-color);
+}
+
+.card__button-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
+}
+
+/*
 .card__button {
   display: flex;
   flex-direction: row;
   justify-content: end;
   gap: 12px;
-  padding-inline-end: 25px;
-  padding-block-end: 25px;
   font-family: var(--page-accent-font);
   font-size: var(--button-font-size);
   line-height: 0.9;
 }
-
+*/
 .button__text {
   color: var(--page-main-color);
 }
 
 .card__icon-button {
-  display: flex;
-  border: 2px solid transparent;
-  background: transparent;
-  cursor: pointer;
   padding: 0;
-}
-
-.like-icon {
-  inline-size: 39px;
-  block-size: 36px;
+  border: none;
 }
 
 .card__icon-button:focus {
@@ -131,34 +181,64 @@
 }
 
 .card__icon-button::focus-visible {
-  outline: 2px solid var(--page-main-color);
+  /*border: 2px solid var(--page-main-color);*/
   transition: outline-color 0.3s ease;
 }
 
 .card__like-button {
-  min-width: 130px;
-  min-height: 38px;
-
+  min-inline-size: 130px;
+  min-block-size: 38px;
+  border: 2px solid var(--page-main-color);
+  cursor: pointer;
 }
 
-.button__icon {
-  block-size: 22px;
-  inline-size: 22px;
-  color: var(--page-main-color);
-  mix-blend-mode: difference;
+.card__like-button:focus {
+  outline: none;
 }
 
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--like-outline-color);
+}
 
 .footer {
   margin: 0 auto 100px;
 }
 
-.card__save-button {
+.footer__button {
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 8px;
-  padding: 15px 20px;
+  align-items: center;
+
+}
+
+.card__save-button {
+  min-block-size: 55px;
+  min-inline-size: 335px;
+  color: var(--page-main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button__icon {
+  block-size: 21px;
+  inline-size: 21px;
+}
+
+@media (width <= 375px) {
+  .card__list-heading {
+    padding-block: 5px;
+  }
+
+  .card__save-button {
+    flex-direction: column;
+    min-inline-size: 306px;
+    min-block-size: 84px;
+  }
+
+  .button__icon {
+    block-size: 28px;
+    inline-size: 28px;
+  }
 }
