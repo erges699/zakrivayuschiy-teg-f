@@ -62,13 +62,33 @@
     </main>
     <footer class="footer section__rubbering">
       <section class="footer__button section__flexing">
-        <button class="button card__save-button">
+        <button 
+          class="button card__save-button"
+          type="button"
+          onclick="window['memories-dialog'].showModal()"
+          aria-controls="memories-dialog"
+          >
           <svg class="button__icon" viewBox="0 0 39 39">
             <use href="./svg/floppy.svg#floppy" />
           </svg>
           <span class="button__text">Сохранить на память</span>
         </button>
       </section>
+      <dialog class="memories-dialog" id="memories-dialog">
+        <section class="dialog__content">
+          <svg class="dialog__icon" viewBox="0 0 39 39">
+            <use href="./svg/floppy.svg#floppy" />
+          </svg>
+          <span class="dialog__text">вставьте дискету,&nbsp;чтобы продолжить</span>
+        </section>
+        <button 
+          class="button dialog__button"
+          type="button"
+          onclick="window['memories-dialog'].close()"
+        >
+        <span class="button__text">OK</span>
+        </button>
+      </dialog>
     </footer>
     <script src="./scripts/like.js"></script>
   </body>

@@ -226,6 +226,42 @@
   inline-size: 21px;
 }
 
+.memories-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-inline-size: 353px;
+  max-block-size: 191px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.memories-dialog[open] .dialog__content {
+  min-inline-size: 293px;
+  min-block-size: 63px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-family: var(--page-accent-font);
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.memories-dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(7px);
+}
+
+.memories-dialog[open] .dialog__icon {
+  min-block-size: 39px;
+  min-inline-size: 39px;
+}
+
+.memories-dialog[open] .dialog__button {
+  min-inline-size: 293px;
+  min-block-size: 38px;
+}
+
 @media (width <= 375px) {
   .card__list-heading {
     padding-block: 5px;
