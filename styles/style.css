@@ -137,34 +137,34 @@
   filter: grayscale(75%);
 }
 
-.hue-rotate {
-  filter: hue-rotate(45deg);
+.saturate {
+  filter: saturate(400%);
 }
 
-.invert {
-  filter: invert(1);
+.hue-rotate {
+  filter: hue-rotate(45deg);
 }
 
 .sepia {
   filter: sepia(1);
 }
 
+.multiple {
+  filter: contrast(95%) hue-rotate(-15deg) saturate(130%);
+}
+
 .blur {
   filter: blur(10px);
 }
 
-.hue-rotate-contrast {
-  filter: hue-rotate(90deg) contrast(0.5); 
-} 
-
-.saturate {
-  filter: saturate(400%);
+.invert {
+  filter: invert(1);
 }
 
 .card__image {
   display: block;
-  width: 100%;
-  height: 100%;
+  max-inline-size: 696px;
+  max-block-size: 696px;
   object-fit: cover;
   object-position: right;
 }
@@ -314,6 +314,12 @@
 }
 
 @media (width <= 375px) {
+  .card__image {
+    display: block;
+    max-inline-size: 375px;
+    max-block-size: 375px;
+  }
+
   .card__list-heading {
     padding-block: 5px;
   }
