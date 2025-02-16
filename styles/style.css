@@ -15,7 +15,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
 
-  font-variation-settings: var(--main-font-weight);
+  font-variation-settings: "wght" var(--main-font-weight);
   font-family: var(--page-main-font);
 
   background-image: var(--page-background-image);
@@ -94,7 +94,7 @@
 }
 
 .card__list-heading {
-  font-weight: var(--heading-font-weight);
+  font-variation-settings: "wght" var(--heading-font-weight);
   padding-block: 3px;
   padding-inline: 10px;
 }
@@ -128,7 +128,7 @@
   (-webkit-text-stroke: 1px var(--page-background-color)) or
     (text-stroke: 1px var(--page-background-color))
 ) {
-  .card__imges__label {
+  .card__image-label {
     -webkit-text-stroke: 1px var(--page-background-color);
   }
 }
@@ -166,7 +166,7 @@
   max-inline-size: 696px;
   max-block-size: 696px;
   object-fit: cover;
-  object-position: right;
+  background-position : center;
 }
 
 .button-decoring {
@@ -282,14 +282,11 @@
   flex-direction: column;
   gap: 30px;
   max-inline-size: 353px;
-  max-block-size: 191px;
   padding: 30px;
-  overflow: hidden;
 }
 
 .memories-dialog[open] .dialog__content {
   min-inline-size: 293px;
-  min-block-size: 63px;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -299,8 +296,7 @@
 }
 
 .memories-dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.3);
-  backdrop-filter: blur(7px);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .memories-dialog[open] .dialog__icon {
