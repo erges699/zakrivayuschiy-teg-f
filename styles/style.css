@@ -47,20 +47,20 @@
   margin: 0 auto;
 }
 
-.header__title-block{
+.header__title-block {
   align-items: center;
   min-width: 100%;
   gap: 20px;
   padding-block: clamp(120px, var(--breakpoint-simulation) * 1000, 128px);
 }
 
-.header__logo{
+.header__logo {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
 
 }
 
-.header__title{
+.header__title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
 }
@@ -99,7 +99,7 @@
   padding-inline: 10px;
 }
 
-.card__figure{
+.card__figure {
   position: relative;
   margin: 0;
   width: 100%;
@@ -113,7 +113,7 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
   font-family: var(--page-accent-font);
-  line-height: normal; 
+  line-height: normal;
   text-transform: uppercase;
   text-shadow:
   -1px 0 var(--page-background-color), 
@@ -209,7 +209,7 @@
   min-inline-size: 130px;
   min-block-size: 38px;
   border: 2px solid var(--page-main-color);
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .card__like-button:focus {
