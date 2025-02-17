@@ -90,7 +90,7 @@
   font-size: var(--heading-font-size);
   padding-block: 5px;
   padding-inline: 10px;
-  min-block-size: 33px; 
+  min-block-size: 33px;
 }
 
 .card__figure {
