@@ -3,8 +3,10 @@
     --page-main-font: "Inter", sans-serif;
     --page-accent-font: "PressStart2P", monospace;
     --main-font-weight: 400;
+    --main-font-size: 18px;
     --main-text-line-height: 1.17;
     --heading-font-weight: 700;
+    --heading-font-size: 18px;
 
     --button-font-size: 14px;
     --button-text-line-height: 0.9;
