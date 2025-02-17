@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --page-main-font: "Inter", sans-serif;
-    --page-accent-font: "PressStart2P", monospace;
+    --page-main-font: "Inter", "EB Garamond", "STIX Two Text", sans-serif;
+    --page-accent-font: "PressStart2P", fantasy;
     --main-font-weight: 400;
     --main-font-size: 18px;
     --main-text-line-height: 1.17;
@@ -21,7 +21,7 @@
     --max-block-width: 696px;
 
     --breakpoint: 375px;
-    --breakpoint-simulation: (100vw - var(--breakpoint));
+    --breakpoint-simulation: calc(100vw - var(--breakpoint));
 
     --like-button-outline-color: #000;
     --like-background-color: #FF0000;
