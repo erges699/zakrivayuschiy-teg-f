@@ -68,7 +68,7 @@
 }
 
 .main {
-  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem); 
   margin: 100px auto 103px;
   line-height: var(--main-text-line-height);
 }
