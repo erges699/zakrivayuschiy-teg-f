@@ -67,7 +67,7 @@
   text-transform: uppercase;
 }
 
-.main { 
+.main {
   margin: 100px auto 103px;
   line-height: var(--main-text-line-height);
 }
