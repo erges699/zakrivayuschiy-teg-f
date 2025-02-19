@@ -374,13 +374,18 @@
           </svg>
           <p class="dialog__text">вставьте дискету,&nbsp;чтобы продолжить</p>
         </div>
-        <button 
+        <!--<button 
           class="button-decoring dialog__button button-diff button-focus-visible button-focus"
           type="button"
           onclick="window['memories-dialog'].close()"
         >
           <span class="button__text button-diff__content">OK</span>
-        </button>
+        </button>-->
+        <form method="dialog">
+          <button type="submit" class="button-decoring dialog__button button-diff button-focus-visible button-focus">
+            <span class="button__text button-diff__content">OK</span>
+          </button>
+        </form>
       </dialog>
     <!-- </footer> -->
     </main>
