@@ -104,6 +104,8 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
   font-family: var(--page-accent-font);
+  font-size: var(--button-font-size);
+  font-weight: var(--main-font-weight);
   line-height: normal;
   text-transform: uppercase;
   text-shadow:
